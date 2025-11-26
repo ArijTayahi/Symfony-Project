@@ -1,0 +1,41 @@
+{# bch naffichiw liste mt3 books published w idha 9a liste fergha bch yaffichi message "No books found" #}
+{% if publishedbooks|length == 0 %}
+    <h1>No books found</h1>
+{% else %}
+    <h1>Published Books</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Ref</th>
+            <th>Title</th>
+            <th>Publication Date</th>
+            <th>Published</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+        {% for publishedbook in publishedbooks %}
+        <tr>
+            <td>{{ publishedbook.id }}</td>
+            <td>{{ publishedbook.ref }}</td>
+            <td>{{ publishedbook.title }}</td>
+            {# bch naffichiw publicationDate b format date ('Y-m-d') #}
+            <td>{{ publishedbook.publicationDate|date('Y-m-d') }}</td>
+            {# bch naffichiw published w not published ca depend ml colonne published lil book mte3na true wala false #}
+            <td>{{ publishedbook.published ? 'Published' : 'Not Published' }}</td>
+            <td>{{ publishedbook.author.username }}</td>
+            <td>{{ publishedbook.category }}</td>
+            <td>
+                <a href="{{ path('app_book_edit', {'id': publishedbook.id}) }}">Edit</a>
+                <a href="{{ path('app_book_delete', {'id': publishedbook.id}) }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+{# bch naffichiw nombre mt3 books published w unpublished w romance #}
+<h1>Number of published books: {{ publishedbooks|length }}</h1>
+<h1>Number of unpublished books: {{ unpublishedbooks|length }}</h1>
+<h1>Number of romance books: {{ romanceCount }}</h1>
+

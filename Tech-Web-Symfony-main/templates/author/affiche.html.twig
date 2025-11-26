@@ -1,0 +1,29 @@
+
+{# hedhi interface mte3na bch nchoufou liste mte3 auteurs #}
+<h1>Liste des auteurs</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    {% for author in author %}
+    <tr>
+        <td>{{ author.id }}</td>
+        <td>{{ author.username }}</td>
+        <td>{{ author.email }}</td>
+        <td>
+            <a href="{{ path('author_edit', {'id': author.id}) }}">Edit</a>
+            <a href="{{ path('author_delete', {'id': author.id}) }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{# affichage message ili b3athneh bl happyQuote #}
+{{ happyQuote }}
+{# affichage liste mte3 best authors #}
+<h2>Best authors</h2>
+{% for author in bestAuthors %}
+    <p>{{ author.username }}</p>
+{% endfor %}

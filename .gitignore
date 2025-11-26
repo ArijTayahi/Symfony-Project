@@ -1,0 +1,19 @@
+# Symfony / PHP
+/vendor/
+/var/
+/.env
+/.idea
+/node_modules/
+/public/build/
+
+# Logs & cache
+*.log
+*.cache
+*.tmp
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
+
+# Doctrine Migrations (optionnel si tu veux versionner seulement le code et pas les migrations)
+# migrations/
