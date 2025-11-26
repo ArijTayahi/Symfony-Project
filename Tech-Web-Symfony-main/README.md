@@ -83,6 +83,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## 📧 Contact
 
-Your Name – [@Mohamed Nour Cherif](https://www.linkedin.com/in/mohamed-nour-cherif) – nourchrif004@gmail.com
+Your Name – [@Tayahi Arij](https://www.linkedin.com/in/arij-tayahi1/) – tayahiarij2@gmail.com -Arij.Tayahi@esprit.tn
 
-Project Link: [https://github.com/mednourchrif/Tech-Web-Symfony](https://github.com/mednourchrif/Tech-Web-Symfony)
+Project Link: [https://github.com/ArijTayahi/Symfony-Project/](https://github.com/ArijTayahi/Symfony-Project/)
